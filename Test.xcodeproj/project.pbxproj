@@ -11,8 +11,7 @@
 		1BA40C9A273FB08100798939 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40C99273FB08100798939 /* StartViewController.swift */; };
 		1BA40C9D273FB11800798939 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40C9C273FB11800798939 /* QuizViewController.swift */; };
 		1BA40C9F273FB14600798939 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40C9E273FB14600798939 /* ResultTableViewController.swift */; };
-		1BA40CA1273FB48D00798939 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40CA0273FB48D00798939 /* AboutViewController.swift */; };
-		1BA40CA3273FB4CF00798939 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40CA2273FB4CF00798939 /* Questions.swift */; };
+		1BA40CA3273FB4CF00798939 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40CA2273FB4CF00798939 /* Question.swift */; };
 		1BA40CA8273FBAEF00798939 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40CA7273FBAEF00798939 /* SettingsViewController.swift */; };
 		1BA40CAE273FBF5A00798939 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40CAD273FBF5A00798939 /* DataManager.swift */; };
 		1BDA62F327319279002B73EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDA62F227319279002B73EC /* AppDelegate.swift */; };
@@ -27,8 +26,7 @@
 		1BA40C99273FB08100798939 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		1BA40C9C273FB11800798939 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuizViewController.swift; path = Test/Storyboards/QuizViewController.swift; sourceTree = SOURCE_ROOT; };
 		1BA40C9E273FB14600798939 /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultTableViewController.swift; path = Test/Storyboards/ResultTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		1BA40CA0273FB48D00798939 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = Test/Storyboards/AboutViewController.swift; sourceTree = SOURCE_ROOT; };
-		1BA40CA2273FB4CF00798939 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		1BA40CA2273FB4CF00798939 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		1BA40CA7273FBAEF00798939 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Test/Storyboards/SettingsViewController.swift; sourceTree = SOURCE_ROOT; };
 		1BA40CAD273FBF5A00798939 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		1BDA62EF27319279002B73EC /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,7 +65,6 @@
 				1BA40C99273FB08100798939 /* StartViewController.swift */,
 				1BA40CA7273FBAEF00798939 /* SettingsViewController.swift */,
 				1BA40C9C273FB11800798939 /* QuizViewController.swift */,
-				1BA40CA0273FB48D00798939 /* AboutViewController.swift */,
 				1BA40C9E273FB14600798939 /* ResultTableViewController.swift */,
 			);
 			path = ViewControllers;
@@ -76,7 +73,7 @@
 		1BA40CA4273FB4D300798939 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1BA40CA2273FB4CF00798939 /* Questions.swift */,
+				1BA40CA2273FB4CF00798939 /* Question.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,9 +208,8 @@
 				1BA40CAE273FBF5A00798939 /* DataManager.swift in Sources */,
 				1BA40C9D273FB11800798939 /* QuizViewController.swift in Sources */,
 				1BA40C9F273FB14600798939 /* ResultTableViewController.swift in Sources */,
-				1BA40CA1273FB48D00798939 /* AboutViewController.swift in Sources */,
 				1BDA62F327319279002B73EC /* AppDelegate.swift in Sources */,
-				1BA40CA3273FB4CF00798939 /* Questions.swift in Sources */,
+				1BA40CA3273FB4CF00798939 /* Question.swift in Sources */,
 				1BDA62F527319279002B73EC /* SceneDelegate.swift in Sources */,
 				1BA40C9A273FB08100798939 /* StartViewController.swift in Sources */,
 				1BA40CA8273FBAEF00798939 /* SettingsViewController.swift in Sources */,
