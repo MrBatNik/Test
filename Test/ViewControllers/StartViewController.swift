@@ -8,10 +8,14 @@
 import UIKit
 
 class StartViewController: UIViewController {
+    
+    var userName = ""
 
+    @IBOutlet var welcomeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        welcomeLabel.text = "Привет, \(userName)! Выбери уровень сложности:"
     }
 
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {}
