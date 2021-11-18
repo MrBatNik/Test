@@ -31,16 +31,17 @@ class StartViewController: UIViewController {
     
     @IBAction func didChangeSegment() {
         switch levelSegmentedControl.selectedSegmentIndex {
-            case 0: level = .first
-            case 1: level = .second
-            default: level = .third
+        case 0: level = .first
+        case 1: level = .second
+        case 2: level = .third
+        default: break
         }
     }
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
         self.tabBarController?.tabBar.isHidden = false
     }
-
+    
 }
 
 extension StartViewController {
@@ -48,14 +49,7 @@ extension StartViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let nextViewController = segue.destination as? QuizViewController else { return }
         
-        switch level {
-            case .first:
-                nextViewController.questions = questions.filter { $0.level == .first }
-            case .second:
-                nextViewController.questions = questions.filter { $0.level == .second }
-            default:
-                nextViewController.questions = questions.filter { $0.level == .third }
-        }
+        nextViewController.questions = questions.filter{ $0.level == level }
     }
-    
 }
+
