@@ -47,7 +47,7 @@ class StartViewController: UIViewController {
 extension StartViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let nextViewController = segue.destination as? QuizViewController else { return }
+        guard let nextViewController = segue.destination as? QuestionsViewController else { return }
         
         nextViewController.questions = questions.filter{ $0.level == level }
     }

@@ -19,7 +19,7 @@ class QuestionsViewController: UIViewController {
     @IBOutlet var multipleLabels: [UILabel]!
     @IBOutlet var multipleSwitches: [UISwitch]!
     
-    private let questions = Question.getQuestions()
+    var questions: [Question] = []
     private var answersChosen: [Answer] = []
     private var currentAnswers: [Answer] {
         questions[questionIndex].answers
