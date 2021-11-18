@@ -8,22 +8,18 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-
+    
     @IBOutlet var nameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-  
+    
     private var userName = ""
     private var password = "Xcode"
     
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else {return}
         guard let tabBarControllers = tabBarController.viewControllers else {return}
-    for viewController in tabBarControllers {
-        if let aboutVC = viewController as? AboutViewController {
-                aboutVC.userName = userName
-        } else if let navigationVC = viewController as? UINavigationController {
+        for viewController in tabBarControllers {
+            if let navigationVC = viewController as? UINavigationController {
                 let startVC = navigationVC.topViewController as! StartViewController
                 userName = nameTF.text ?? "incognito"
                 startVC.userName = userName
@@ -33,18 +29,19 @@ class LoginViewController: UIViewController {
     
     @IBAction func goButtonPressed() {
         guard passwordTF.text == password
-            else {
+        else {
             showAlert(title: "Invalid password", message: "Please try again")
             return
         }
-            guard let inputText = nameTF.text, !inputText.isEmpty else {
+        guard let inputText = nameTF.text, !inputText.isEmpty else {
             showAlert(title: "Text field is empty", message: "Please enter your name")
             return
         }
     }
-
+    
     @IBAction func PasswordHint() {
-        showAlert(title: "Ответь на вопрос:", message: "Как называется среда разработки программного обеспечения для платформ macOS, iOS, watchOS и tvOS?")
+        showAlert(title: "Ответь на вопрос:",
+                  message: "Как называется среда разработки программного обеспечения для платформ macOS и iOS?")
     }
 }
 
@@ -74,5 +71,4 @@ extension LoginViewController: UITextFieldDelegate {
         }
         return true
     }
-    
 }
