@@ -19,21 +19,25 @@ class QuestionsViewController: UIViewController {
     @IBOutlet var multipleLabels: [UILabel]!
     @IBOutlet var multipleSwitches: [UISwitch]!
     
-    var questions: [Question] = []
     private var answersChosen: [Answer] = []
     private var currentAnswers: [Answer] {
         questions[questionIndex].answers
     }
     private var questionIndex = 0
     
+    var questions: [Question] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
+        self.tabBarController?.tabBar.isHidden = true
         updateUI()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultVC = segue.destination as? ResultTableViewController else { return }
-        resultVC.answers = self.answersChosen
+        resultVC.questions = questions
+        resultVC.answers = answersChosen
         
     }
     
@@ -51,8 +55,9 @@ class QuestionsViewController: UIViewController {
                 answersChosen.append(answer)
             }
         }
-        
-        nextQuestion()
+        if multipleSwitches.contains(where: { $0.isOn == true}) {
+            nextQuestion()
+        }
     }
     
 }
@@ -81,6 +86,7 @@ extension QuestionsViewController {
         title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
         
         showCurrentAnswers(for: currentQuestion.type)
+        print(answersChosen)
     }
     
     private func showCurrentAnswers(for type: ResponseType) {
@@ -100,7 +106,7 @@ extension QuestionsViewController {
     
     private func showMultipleStackView(with answers: [Answer]) {
         multipleStackView.isHidden.toggle()
-        
+        multipleSwitches.forEach { $0.isOn = false}
         for (label, answer) in zip(multipleLabels, answers) {
             label.text = answer.title
         }
@@ -117,3 +123,4 @@ extension QuestionsViewController {
         performSegue(withIdentifier: "showResults", sender: nil)
     }
 }
+
