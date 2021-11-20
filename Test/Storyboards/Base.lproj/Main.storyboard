@@ -45,7 +45,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bX2-Hx-Oyf">
-                                <rect key="frame" x="72.5" y="406" width="175" height="37"/>
+                                <rect key="frame" x="72.5" y="411" width="175" height="37"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot password?">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
@@ -75,7 +75,7 @@
                         <constraints>
                             <constraint firstItem="dD8-5p-Gqv" firstAttribute="top" secondItem="zZy-TX-sTj" secondAttribute="bottom" constant="32" id="9NE-40-kUk"/>
                             <constraint firstItem="dD8-5p-Gqv" firstAttribute="centerX" secondItem="hN2-Uw-FXm" secondAttribute="centerX" id="Dcp-Yp-BpZ"/>
-                            <constraint firstItem="0kj-SW-t6E" firstAttribute="bottom" secondItem="bX2-Hx-Oyf" secondAttribute="bottom" constant="37" id="I6D-RJ-hS4"/>
+                            <constraint firstItem="0kj-SW-t6E" firstAttribute="bottom" secondItem="bX2-Hx-Oyf" secondAttribute="bottom" constant="32" id="I6D-RJ-hS4"/>
                             <constraint firstItem="bX2-Hx-Oyf" firstAttribute="centerX" secondItem="hN2-Uw-FXm" secondAttribute="centerX" id="JEf-nS-SDh"/>
                             <constraint firstItem="zZy-TX-sTj" firstAttribute="centerY" secondItem="hN2-Uw-FXm" secondAttribute="centerY" id="JQe-I9-5jF"/>
                             <constraint firstItem="zZy-TX-sTj" firstAttribute="centerX" secondItem="hN2-Uw-FXm" secondAttribute="centerX" id="Kkg-La-yYX"/>
