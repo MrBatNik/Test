@@ -13,13 +13,28 @@ class ResultTableViewController: UITableViewController {
     
     var questions: [Question]!
     var answers: [Answer]!
+    
+    private var maxScore: Int {
+        let array = questions.map { $0.answers }
+        var count = 0
+        
+        array.forEach { item in
+            item.forEach { item in
+                if item.correct == true {
+                    count += 1
+                }
+            }
+        }
+        
+        return count
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
         self.tabBarController?.tabBar.isHidden = true
-        title = "Результат: \(scoreCount(from: answers)) из \(questions.count)"
+        title = "Результат: \(scoreCount(from: answers)) из \(maxScore)"
         resultLabel.text = setResultLabel()
     }
 
@@ -63,28 +78,10 @@ class ResultTableViewController: UITableViewController {
         let resultCell = tableView.dequeueReusableCell(withIdentifier: "resultCell", for: indexPath)
         var components = resultCell.defaultContentConfiguration()
         
-        switch indexPath.row {
-            case 0:
-                components.text = questions[indexPath.section].answers[indexPath.row].title
-                components.image = setImage(for: indexPath)
-                resultCell.backgroundColor = setBackgroundColor(for: indexPath)
-                resultCell.contentConfiguration = components
-            case 1:
-                components.text = questions[indexPath.section].answers[indexPath.row].title
-                components.image = setImage(for: indexPath)
-                resultCell.backgroundColor = setBackgroundColor(for: indexPath)
-                resultCell.contentConfiguration = components
-            case 3:
-                components.text = questions[indexPath.section].answers[indexPath.row].title
-                components.image = setImage(for: indexPath)
-                resultCell.backgroundColor = setBackgroundColor(for: indexPath)
-                resultCell.contentConfiguration = components
-            default:
-                components.text = questions[indexPath.section].answers[indexPath.row].title
-                components.image = setImage(for: indexPath)
-                resultCell.backgroundColor = setBackgroundColor(for: indexPath)
-                resultCell.contentConfiguration = components
-        }
+        components.text = questions[indexPath.section].answers[indexPath.row].title
+        components.image = setImage(for: indexPath)
+        resultCell.backgroundColor = setBackgroundColor(for: indexPath)
+        resultCell.contentConfiguration = components
 
         return resultCell
     }
@@ -122,13 +119,13 @@ extension ResultTableViewController {
         let finalScore = scoreCount(from: answers)
         var juniorLevel: Junior = .beginner
         
-        if finalScore == questions.count {
+        if finalScore == maxScore {
             juniorLevel = .master
             return "\(juniorLevel.rawValue)\n\(juniorLevel.definition)"
-        } else if (5...6).contains(finalScore) {
+        } else if finalScore >= maxScore - 2 {
             juniorLevel = .intermediate
             return "\(juniorLevel.rawValue)\n\(juniorLevel.definition)"
-        } else if (2...4).contains(finalScore){
+        } else if finalScore >= maxScore - 5 {
             juniorLevel = .elementary
             return "\(juniorLevel.rawValue)\n\(juniorLevel.definition)"
         }

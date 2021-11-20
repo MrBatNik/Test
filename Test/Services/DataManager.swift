@@ -25,7 +25,7 @@ extension Question {
                 Answer(title: "var Float: x = 2.56", correct: false),
             ]
                     ),
-            Question(title: "Где правильно создан массив со строками?", type: .single, level: .first, answers: [
+            Question(title: "Где правильно инициализируется массив со строками?", type: .single, level: .first, answers: [
                 Answer(title: "var words: String = ()", correct: false),
                 Answer(title: "var words = [String]", correct: false),
                 Answer(title: "var words: String = ()", correct: false),
@@ -46,7 +46,7 @@ extension Question {
                 Answer(title: "Model-View-Controller", correct: true),
             ]
                     ),
-            Question(title: "Какой связь есть в MVC?", type: .single, level: .first, answers: [
+            Question(title: "Какая связь есть в MVC?", type: .single, level: .first, answers: [
                 Answer(title: "Controller-View", correct: true),
                 Answer(title: "Model-View", correct: false),
                 Answer(title: "View-View", correct: false),
