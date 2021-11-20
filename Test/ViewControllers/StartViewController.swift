@@ -10,6 +10,7 @@ import UIKit
 class StartViewController: UIViewController {
     
     @IBOutlet var levelSegmentedControl: UISegmentedControl!
+    @IBOutlet var nameLabel: UILabel!
     
     var userName: String!
     private let questions = Question.getQuestions()
@@ -23,6 +24,7 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nameLabel.text = "Hello, " + userName + "!"
         for index in 0..<levels.count {
             levelSegmentedControl.setTitle(levels[index], forSegmentAt: index)
         }

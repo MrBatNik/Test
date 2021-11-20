@@ -103,6 +103,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemOrangeColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="xTO-sK-mKA" kind="relationship" relationship="viewControllers" id="IU4-zn-PJR"/>
@@ -150,26 +151,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="2mM-5Q-Sol">
-                                <rect key="frame" x="16" y="359.5" width="382" height="177.5"/>
+                                <rect key="frame" x="16" y="362.5" width="382" height="171.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irb-iS-yI1">
-                                        <rect key="frame" x="56" y="0.0" width="270" height="62"/>
+                                        <rect key="frame" x="71" y="0.0" width="240" height="56"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Начать опрос">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="40"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="W3c-Oa-lhP" kind="show" id="Xf5-A1-jJE"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите уровень сложности вопросов:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c3o-qy-jST">
-                                        <rect key="frame" x="28.5" y="94" width="325.5" height="20.5"/>
+                                        <rect key="frame" x="28.5" y="88" width="325.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rcR-Na-R6E">
-                                        <rect key="frame" x="92.5" y="146.5" width="197" height="32"/>
+                                        <rect key="frame" x="92.5" y="140.5" width="197" height="32"/>
                                         <segments>
                                             <segment title="First"/>
                                             <segment title="Second"/>
@@ -181,18 +182,29 @@
                                     </segmentedControl>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3L-p5-d2U">
+                                <rect key="frame" x="148.5" y="240" width="117" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nhz-Ce-I5G"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2mM-5Q-Sol" firstAttribute="centerY" secondItem="MTh-47-9NM" secondAttribute="centerY" id="L8L-5G-TP1"/>
+                            <constraint firstItem="L3L-p5-d2U" firstAttribute="centerX" secondItem="MTh-47-9NM" secondAttribute="centerX" id="O4a-lc-bVs"/>
+                            <constraint firstItem="nhz-Ce-I5G" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="L3L-p5-d2U" secondAttribute="trailing" id="UUZ-xF-xdT"/>
                             <constraint firstItem="nhz-Ce-I5G" firstAttribute="trailing" secondItem="2mM-5Q-Sol" secondAttribute="trailing" constant="16" id="axa-nH-SpB"/>
+                            <constraint firstItem="L3L-p5-d2U" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nhz-Ce-I5G" secondAttribute="leading" id="cQ9-fr-Jqb"/>
                             <constraint firstItem="2mM-5Q-Sol" firstAttribute="leading" secondItem="nhz-Ce-I5G" secondAttribute="leading" constant="16" id="dNC-gs-Hu0"/>
+                            <constraint firstItem="L3L-p5-d2U" firstAttribute="top" secondItem="nhz-Ce-I5G" secondAttribute="top" constant="100" id="mhy-MR-cN5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Junior Quiz" id="qlI-kD-g29"/>
                     <connections>
                         <outlet property="levelSegmentedControl" destination="rcR-Na-R6E" id="DFs-v0-kRe"/>
+                        <outlet property="nameLabel" destination="L3L-p5-d2U" id="K1U-0f-4VE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPY-Mr-LpS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
