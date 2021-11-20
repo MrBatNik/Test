@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B47315827491E43003B3FF1 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47315727491E43003B3FF1 /* ResultTableViewController.swift */; };
+		1B8710C92749320E001BB02B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8710C82749320E001BB02B /* ResultViewController.swift */; };
 		1BA40C97273FB04C00798939 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40C96273FB04C00798939 /* LoginViewController.swift */; };
 		1BA40C9A273FB08100798939 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40C99273FB08100798939 /* StartViewController.swift */; };
 		1BA40CA3273FB4CF00798939 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40CA2273FB4CF00798939 /* Question.swift */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1B47315727491E43003B3FF1 /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		1B8710C82749320E001BB02B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = SOURCE_ROOT; };
 		1BA40C96273FB04C00798939 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1BA40C99273FB08100798939 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		1BA40CA2273FB4CF00798939 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -61,8 +61,8 @@
 			children = (
 				1BA40C96273FB04C00798939 /* LoginViewController.swift */,
 				1BA40C99273FB08100798939 /* StartViewController.swift */,
-				1B47315727491E43003B3FF1 /* ResultTableViewController.swift */,
 				42E90B6627469AFA00D9C361 /* QuestionsViewController.swift */,
+				1B8710C82749320E001BB02B /* ResultViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -204,8 +204,8 @@
 				1BA40C97273FB04C00798939 /* LoginViewController.swift in Sources */,
 				1BA40CAE273FBF5A00798939 /* DataManager.swift in Sources */,
 				1BDA62F327319279002B73EC /* AppDelegate.swift in Sources */,
+				1B8710C92749320E001BB02B /* ResultViewController.swift in Sources */,
 				1BA40CA3273FB4CF00798939 /* Question.swift in Sources */,
-				1B47315827491E43003B3FF1 /* ResultTableViewController.swift in Sources */,
 				42E90B6727469AFA00D9C361 /* QuestionsViewController.swift in Sources */,
 				1BDA62F527319279002B73EC /* SceneDelegate.swift in Sources */,
 				1BA40C9A273FB08100798939 /* StartViewController.swift in Sources */,
