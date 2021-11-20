@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B47315827491E43003B3FF1 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47315727491E43003B3FF1 /* ResultTableViewController.swift */; };
 		1BA40C97273FB04C00798939 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40C96273FB04C00798939 /* LoginViewController.swift */; };
 		1BA40C9A273FB08100798939 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40C99273FB08100798939 /* StartViewController.swift */; };
-		1BA40C9F273FB14600798939 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40C9E273FB14600798939 /* ResultTableViewController.swift */; };
 		1BA40CA3273FB4CF00798939 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40CA2273FB4CF00798939 /* Question.swift */; };
 		1BA40CAE273FBF5A00798939 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA40CAD273FBF5A00798939 /* DataManager.swift */; };
 		1BDA62F327319279002B73EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDA62F227319279002B73EC /* AppDelegate.swift */; };
@@ -21,9 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B47315727491E43003B3FF1 /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
 		1BA40C96273FB04C00798939 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1BA40C99273FB08100798939 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		1BA40C9E273FB14600798939 /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultTableViewController.swift; path = Test/Storyboards/ResultTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		1BA40CA2273FB4CF00798939 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		1BA40CAD273FBF5A00798939 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		1BDA62EF27319279002B73EC /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +61,7 @@
 			children = (
 				1BA40C96273FB04C00798939 /* LoginViewController.swift */,
 				1BA40C99273FB08100798939 /* StartViewController.swift */,
-				1BA40C9E273FB14600798939 /* ResultTableViewController.swift */,
+				1B47315727491E43003B3FF1 /* ResultTableViewController.swift */,
 				42E90B6627469AFA00D9C361 /* QuestionsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -203,9 +203,9 @@
 			files = (
 				1BA40C97273FB04C00798939 /* LoginViewController.swift in Sources */,
 				1BA40CAE273FBF5A00798939 /* DataManager.swift in Sources */,
-				1BA40C9F273FB14600798939 /* ResultTableViewController.swift in Sources */,
 				1BDA62F327319279002B73EC /* AppDelegate.swift in Sources */,
 				1BA40CA3273FB4CF00798939 /* Question.swift in Sources */,
+				1B47315827491E43003B3FF1 /* ResultTableViewController.swift in Sources */,
 				42E90B6727469AFA00D9C361 /* QuestionsViewController.swift in Sources */,
 				1BDA62F527319279002B73EC /* SceneDelegate.swift in Sources */,
 				1BA40C9A273FB08100798939 /* StartViewController.swift in Sources */,
