@@ -128,7 +128,7 @@
             } else if finalScore >= maxScores - 2 {
                 juniorLevel = .intermediate
                 return "\(juniorLevel.rawValue)\n\(juniorLevel.definition)"
-            } else if finalScore >= maxScores - 5 {
+            } else if finalScore >= maxScores - 4 {
                 juniorLevel = .elementary
                 return "\(juniorLevel.rawValue)\n\(juniorLevel.definition)"
             }
