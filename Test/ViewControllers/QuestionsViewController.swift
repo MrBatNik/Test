@@ -11,10 +11,10 @@ class QuestionsViewController: UIViewController {
     
     @IBOutlet var questionProgressView: UIProgressView!
     @IBOutlet var questionLabel: UILabel!
-//
+
     @IBOutlet var singleStackView: UIStackView!
     @IBOutlet var singleButtons: [UIButton]!
-//
+
     @IBOutlet var multipleStackView: UIStackView!
     @IBOutlet var multipleLabels: [UILabel]!
     @IBOutlet var multipleSwitches: [UISwitch]!
