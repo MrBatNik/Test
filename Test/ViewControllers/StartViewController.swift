@@ -11,6 +11,7 @@ class StartViewController: UIViewController {
     
     @IBOutlet var levelSegmentedControl: UISegmentedControl!
     
+    var userName: String!
     private let questions = Question.getQuestions()
     private let levels: [String] = [
         Level.first.rawValue,
